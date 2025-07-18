@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+:root {
+
+    /* ### Primary */
+
+    --Blue-500: hsl(215, 51%, 70%);
+    --Cyan-400: hsl(178, 100%, 50%);
+
+    /* ### Neutral */
+
+    --Blue-950-main-BG: hsl(217, 54%, 11%);
+    --Blue-900-card-BG: hsl(216, 50%, 16%);
+    --Blue-800-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+body {
+    background-color: var(--Blue-950-main-BG);
+    font-family: 'Outfit', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main__container {
+    max-width: 350px;
+}
+
+.card {
+    background-color: var(--Blue-900-card-BG);
+    max-width: 375px;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.card__image {
+    position: relative;
+    display: inline-block;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(178, 100%, 50%, 0.5);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.image__overlay .eye-icon {
+    opacity: 1;
+}
+
+.card__image:hover .image__overlay {
+    opacity: 1;
+}
+
+.equilibrium {
+    border-radius: 0.5rem;
+}
+
+.main__text {
+    padding-block: 1.5rem;        
+}
+
+.title {
+    color: var(--White);
+    font-size: 1.375rem;
+    padding-block-end: 1.5rem;
+}
+
+.title:hover {
+    color: var(--Cyan-400);
+    cursor: pointer;
+}
+
+.description {
+    color: var(--Blue-500);
+    font-size: 1.125rem;
+}
+
+.price {
+    color: var(--Cyan-400);
+}
+
+.avatar {
+    width: 33px;
+    height: 33px;
+}
+
+.name {
+    color: var(--White);
+}
+
+.name:hover {
+    color: var(--Cyan-400);
+    cursor: pointer;
+}
+
+.main__info__container {
+    display: flex;
+    justify-content: space-between;
+    padding-block-end: 1.5rem;
+    border-bottom: solid 1px var(--Blue-800-line);
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.info img {
+    margin-right: 0.5rem;
+}
+
+.main__name__container {
+    display: flex;
+    align-items: center;
+    padding-block-start: 1.5rem;
+}
+
+.main__name__container img {
+    margin-right: 0.5rem;
+}
+
